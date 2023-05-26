@@ -89,8 +89,11 @@ const verifyOtp = async function (req, res) {
 }
 
 const getUser = function (req,res) {
-
+   res.send("dead")
 }
+
+
+
 
 
 
