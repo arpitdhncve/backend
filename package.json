@@ -15,6 +15,10 @@
   "bugs": {
     "url": "https://github.com/tanmay-bdhl/konoha/issues"
   },
+  "engines" : {
+    "npm" : ">= 8.0.0 <9.0.0",
+    "node" : ">= 16.0.0 <17.0.0"
+  },
   "homepage": "https://github.com/tanmay-bdhl/konoha#readme",
   "dependencies": {
     "axios": "^1.4.0",
