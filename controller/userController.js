@@ -12,7 +12,10 @@ function generateJWTToken(userId) {
   }
 
 
-const check = function (req, res) { return res.send('i am up') }
+const check = function (req, res) { return res.status(200).send({
+    status: true,
+    message: "i am up"
+}) }
 
 const loginRegister = async function (req, res) {
     let { mobileNumber } = req.body
