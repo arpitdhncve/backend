@@ -20,7 +20,10 @@ const check = function (req, res) { return res.status(200).send({
 const loginRegister = async function (req, res) {
     let { mobileNumber } = req.body
     if (!mobileNumber || mobileNumber.length !== 10) {
-        res.status(400).send("Invalid mobile number");
+        res.status(400).send({
+            status : false,
+            message : "Invalid Phone Number"
+        });
         return;
     }
 
@@ -38,7 +41,10 @@ const loginRegister = async function (req, res) {
 
     const user = await userModel.findOne({ mobileNumber });
     if (user) {
-        res.status(200).send("Mobile number already exists and OTP sent");
+        res.status(200).send({
+            status : true,
+            message : "Mobile Number already exist and OTP send"
+        });
         return;
     }
     const newUser = new userModel({
@@ -47,7 +53,10 @@ const loginRegister = async function (req, res) {
 
     await newUser.save();
 
-    res.status(201).send("User created successfully and OTP sent");
+    res.status(201).send({
+        status : true,
+        message : "User created successfully and OTP send"
+    });
 
 }
 
