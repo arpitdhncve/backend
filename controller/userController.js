@@ -107,6 +107,8 @@ const getUser = function (req,res) {
 
 
 
+
+
 module.exports.verifyOtp = verifyOtp
 module.exports.loginRegister = loginRegister
 module.exports.check = check

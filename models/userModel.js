@@ -8,6 +8,7 @@ const UserSchema = new mongoose.Schema({
   otp: {
     type: String
   },
+  
 });
 
 const User = mongoose.model("User", UserSchema);
