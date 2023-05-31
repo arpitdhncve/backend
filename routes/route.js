@@ -6,7 +6,14 @@ const router = express.Router();
 router.get('/', userController.check)
 router.post('/loginRegister', userController.loginRegister)
 router.post('/verifyOtp',userController.verifyOtp)
+
+
+
+
+
 router.post('/uploadBhajan',contentController.uploadBhajan)
+router.get('/getBhajan',contentController.getBhajan)
+
 
 
 

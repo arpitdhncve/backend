@@ -7,9 +7,21 @@ const ContentSchema = new mongoose.Schema({
   },
   type: {
     type: String,
-    enum : ["bhajan","suvichar"],
-    default : "bhajan"
+    enum: ["bhajan", "suvichar"],
+    default: "bhajan"
   },
+  "isDeleted": {
+    type: Boolean,
+    default: false
+  },
+  bhajanAudio : {
+    type: String,
+    required: false
+  },
+  bhajanImage: {
+    type: String,
+    required: false
+  }
 });
 
 const Content = mongoose.model("Content", ContentSchema);
